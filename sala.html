@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sala</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+	<div class="container">		
+		<div id="messageArea" class="row">
+			<div class="col-md-4">
+				<div class="well">
+					<h3>Online Users - Sala: <span id="salaNome"></span></h3>
+					<div class="list-group" id="onlineUsers"></div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="chat" id="chat"></div>
+				<form id="messageForm" >
+					<div class="form-group">
+						<label> Enter Message</label>
+						<textarea class="form-control" id="message"></textarea>
+						<br>
+						<input type="submit" class="btn btn-prmary" value="Send Message ">
+					</div>
+				</form>
+				
+			</div>
+
+			<div class="col-md-8">
+				<div class="chat" id="questao"></div>
+				<form id="respostaForm" >
+					<div id="radioDiv" class="form-group">
+						<label> Questão: <span id="descricaoQuestao"></span></label>						
+						<br>
+						<form id="radioForm">
+						  <input id="radioName" type="radio" name="gender" value="a" > a) <span id="a"></span><br>
+						  <input id="radioName" type="radio" name="gender" value="b" > b) <span id="b"></span><br>
+						  <input id="radioName" type="radio" name="gender" value="c" > c) <span id="c"></span><br> 
+						  <input id="radioName" type="radio" name="gender" value="d" > d) <span id="d"></span><br> 
+						  <input id="radioName" type="radio" name="gender" value="e" > e) <span id="e"></span> 
+						</form>
+						<br><br>
+						<input type="submit" class="btn btn-prmary" value="Responder">
+					</div>
+				</form>
+				
+			</div>
+
+		</div>
+	</div>
+	
+</body>
+</html>
